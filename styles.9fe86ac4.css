@@ -1,0 +1,1289 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(Raleway-SemiBold.8b35372b.ttf);
+}
+@font-face {
+    font-family: "RalewayR";
+    src: url(Raleway-Regular.628d4965.ttf);
+}
+@font-face {
+    font-family: "RalewayB";
+    src: url(Raleway-Black.575a8048.ttf);
+}
+@font-face {
+    font-family: "RalewayBold";
+    src: url(Raleway-Bold.e2ddc7dd.ttf);
+}
+@font-face {
+    font-family: "RobotoR";
+    src: url(Roboto-Regular.066712b8.ttf);
+}
+@font-face {
+    font-family: "RobotoB";
+    src: url(Roboto-Bold.ccce0b47.ttf);
+}
+@font-face {
+    font-family: "RobotoBlack";
+    src: url(Roboto-Black.24043b28.ttf);
+}
+@font-face {
+    font-family: "Inter";
+    src: url(Inter-Regular.f6ee7e35.otf);
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #e2e2e2;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bcfd49;
+    border-radius: 30px;
+}
+
+a {
+    color: black;
+}
+
+body {
+    font-family: "Raleway";
+    font-size: 16px;
+    line-height: 160%;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+
+/* Navigation */
+.navigation {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.desktop-navigation {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 10px;
+}
+
+.logo-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-right: 30px;
+}
+
+.logo-img {
+    width: 41px;
+    height: 32px;
+}
+
+.logo-name {
+    font-size: 12px;
+    font-family: "RobotoB";
+    white-space: nowrap;
+}
+
+.nav__list, .mobile__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    margin-right: 20px;
+}
+
+.mobile__list {
+    display: none;
+}
+
+.mobile-list-active {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.nav-list__item {
+    white-space: nowrap;
+}
+
+.nav-list__item a {
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.nav-list__item a:hover {
+    background-color: #BCFD49;
+}
+
+.search-field {
+    position: relative;
+    margin-right: 22px;
+}
+
+.search__input {
+    width: 340px;
+    height: 48px;
+    border-radius: 22px;
+    border: 2px solid #969696;
+    padding-left: 20px;
+    color: #969696;
+}
+
+.search__input::placeholder {
+    color: #969696;
+    font-family: "RalewayR";
+}
+
+.search-ico-field {
+    background: #BCFD49;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 4px;
+    top: 4px;
+}
+
+.search-ico {
+    width: 24px;
+    height: 24px;
+}
+
+.fast-info-number, .info-number {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-number {
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.fast-info-content {
+    font-family: "RobotoB";
+    white-space: nowrap;
+}
+
+.nav-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav-mobile-active {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mobile-position {
+    transform: rotate(45deg);
+    position: absolute;
+    left: 0;
+    width: 40px !important;
+}
+
+.mobile-position-hidden {
+    display: none;
+}
+
+.mobile-position-reverse {
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 0;
+    width: 40px !important;
+}
+
+.mobile-active {
+    position: relative;
+    width: 60px;
+}
+
+.rectangle {
+    width: 30px;
+    height: 4px;
+    background-color: #000;
+    transition: all 0.5s ease 0s;
+}
+
+.hidden {
+    display: none;
+}
+
+.hero-section {
+    position: relative;
+}
+
+/* Slider */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+  
+.hero-slider-slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+  
+.hero-slider-slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.hero-pagination, .review-pagination {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+  
+.hero-pagination button, .review-pagination button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    width: 10px;
+    height: 14px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+  
+.hero-pagination button.active, .review-pagination button.active {
+    background-color: #fff;
+}
+
+.hero-slider-next, .hero-slider-prev {
+    position: absolute;
+    top: 31%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-slider-next {
+    right: 5%;
+}
+
+.hero-slider-prev {
+    left: 5%;
+}
+
+.slider-button-circle {
+    r: 19.5;
+}
+
+.hero-header {
+    font-family: "RobotoBlack";
+    color: #ffffff;
+    text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-size: 64px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transform: translateX(-50%);
+}
+
+.hero-go-button {
+    background-color: #BCFD49;
+    font-family: "Raleway";
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-large-button {
+    width: 384px;
+    border-radius: 48px;
+    font-size: 24px;
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-search-field {
+    background: #F2F1F1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 1200px;
+    padding: 0 24px 0 0;
+    border-radius: 80px;
+    position: absolute;
+    left: 50%;
+    bottom: 40%;
+    transform: translateX(-50%);
+}
+
+.hero-search-categories {
+    display: flex;
+}
+
+.hero-search-category {
+    display: flex;
+    align-items: center;
+    padding: 0 42px 0 24px;
+    height: 80px;
+    gap: 16px;
+}
+
+.hero-search-input {
+    color: #6C7072;
+    border: none;
+    background-color: transparent;
+    width: 203px;
+    outline: none;
+}
+
+.hero-medium-button {
+    width: 160px;
+    border-radius: 48px;
+}
+
+.partition-section {
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+}
+
+
+
+.main-section {
+    max-width: 1236px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+}
+
+
+
+/* Popular Searches */
+.popular-searches {
+    padding: 128px 0;
+    max-width: 1216px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-header {
+    font-size: 64px;
+    font-family: "RobotoB";
+    margin: 0 auto;
+    padding-bottom: 64px;
+    text-align: center;
+    line-height: 120%;
+}
+
+.popular-searches__list {
+    display: flex;
+    flex-direction: row;  
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.popular-searches-list__item {
+    border: 1px solid #72777A;
+    border-radius: 56px;
+    width: 190px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+
+
+/* Recently wieved trips */
+.main-section-wrapper {
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.recently-trips-header-field {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 64px;
+}
+
+.recently-trips-header {
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.recently-trips-link {
+    color: #7483BD;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateX(-50%);
+}
+
+.recently-trips__list, .trips__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.trips-list__item {
+    width: 384px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #CECACA;
+    border-radius: 48px;
+    box-shadow: 1px 1px 10px #d4d4d4;
+}
+
+.recently-trips-preview {
+    position: relative;
+    margin-bottom: 24px;
+    width: 100%;
+    max-width:none !important;
+}
+
+.recently-trips-preview-price {
+    background-color:#BCFD49;
+    width: 196px;
+    height: 46px;
+    border-top-left-radius: 46px;
+    border-bottom-right-radius: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "RobotoB";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.recently-trips-list-item-wrapper {
+    margin: 0 22px;
+    padding-bottom: 32px;
+    border-bottom: 1px dashed #72777A;
+    min-height: 230px;
+}
+
+.recently-trips-list-item-header {
+    font-family: "RobotoB";
+    font-size: 24px;
+}
+
+.recently-trips-rating-field {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+}
+
+.recently-trips-rating-field-stars {
+    display: flex;
+}
+
+.recently-trips-rating-field-number {
+    font-family: "RobotoB";
+}
+
+.recently-trips-description {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.recently-trips-small-button {
+    margin: 32px 0 40px;
+    width: 209px;
+    height: 48px;
+    border-radius: 48px;
+}
+
+.recently-trips-description-field {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+}
+
+.recently-trips-description-content {
+    font-family: "RobotoB";
+    color: #808080;
+}
+
+.recently-trips-medium-button {
+    height: 56px;
+    width: 250px;
+    border-radius: 56px;
+}
+
+.recently-trips-control {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+
+
+/* Most popular trips */
+.popular-trips {
+    padding: 64px 0 128px;
+    box-shadow: 0px 1px 24px 8px rgba(20, 20, 20, 0.08);
+}
+
+.main-section-wrapper {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-trips-wrapper {
+    max-width: 1236px;
+    margin: 0 auto;
+}
+
+.popular-trips-header-field {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.popular-trips-header {
+    padding: 0;
+}
+
+.popular-trips-control {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+
+.popular-trips-slider-prev, .popular-trips-slider-next {
+    border: none;
+    background: #fff;
+    cursor: pointer;
+}
+
+.popular-trips__list {
+    display: flex;
+    gap: 2%;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    overflow: auto;
+    padding: 70px 0;
+}
+
+.popular-trips__list::-webkit-scrollbar {
+    display: none;
+}
+
+.popular-trips-list__item {
+    width: 49%;
+    scroll-snap-align: start;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.trips-list-item-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 48px;
+    object-fit: cover;
+}
+
+.popular-trips-button {
+    width: 190px;
+    padding: 15px 64px;
+    border: 1px solid #404446;
+    border-radius: 48px;
+    background: transparent;
+    margin: 0 auto;
+}
+
+
+/* Why choose Travel Together */
+.choose-reason {
+    padding-top: 128px;
+}
+.choose-reason__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+.choose-reason-list__item {
+    padding: 31px 69px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border-radius: 64px;
+    border: 1px solid #CECACA;
+}
+
+.choose-reason-list__item:hover {
+    transition: 0.3s;
+    background-color: #BCFD49;
+}
+
+.choose-reason-name {
+    font-size: 24px;
+    text-align: center;
+}
+
+.choose-reason-description {
+    font-family: "RalewayR";
+    max-width: 246px;
+    text-align: center;
+}
+
+/* What travellers are saying */
+.travellers-review {
+    padding-bottom: 140px;
+}
+
+.travellers-review-wrapper {
+    position: relative;
+}
+
+.black-insert {
+    background: #000;
+    margin: 0 auto;
+    width: 748px;
+    height: 464px;
+    border-radius: 34px;
+}
+
+.carousel__list {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    gap: 2%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 34px 0;
+}
+
+.carousel__list::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-list__item {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 32px 80px;
+    width: 32%;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    flex-grow: 1;
+    border: 2px solid #F3F2F2;
+    border-radius: 20px;
+}
+
+.review-name {
+    font-size: 20px;
+    padding: 8px 0 13px ;
+}
+
+.review-description {
+    font-family: "RalewayR";
+}
+
+
+
+
+
+/* Where are we go */
+.places {
+    padding-bottom: 130px;
+}
+
+.places__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.places-list__item {
+    position: relative;
+}
+
+.places-name {
+    position: absolute;
+    color: #fff;
+    font-size: 48px;
+    font-family: "RalewayB";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+    line-height: 160%;
+}
+
+.places-item-more {
+    cursor: pointer;
+}
+
+
+
+/* Try our app */
+.travel-application {
+    padding: 0;
+    margin-bottom: 128px;
+    position: relative;
+}
+
+.travel-application-content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 64px;
+    background-color: #BCFD49;
+    padding: 64px;
+}
+
+.travel-application-header {
+    font-size: 48px;
+    margin: 0;
+    text-align: left;
+    line-height: 120%;
+    padding-bottom: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.travel-application-description {
+    font-size: 16px;
+    font-family: "RalewayR";
+    max-width: 593px;
+    letter-spacing: 0.02em;
+    padding-bottom: 59px;
+    z-index: 1;
+}
+
+.app-stores {
+    display: flex;
+    gap: 32px;
+    z-index: 1;
+}
+
+.application-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* Subscribe field */
+.subscription {
+    padding-bottom: 64px;
+}
+
+.subscription-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.subscription-header {
+    font-size: 48px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.subscription-input-field {
+    position: relative;
+    height: 48px;
+}
+
+.subscription__input {
+    width: 460px;
+    height: 48px;
+    border-radius: 22px;
+    border: 2px solid #969696;
+    padding-left: 20px;
+    color: #969696;
+}
+
+.subscription__input::placeholder {
+    color: #969696;
+    font-family: "RalewayR";
+}
+
+.subscription__button {
+    position: absolute;
+    right: 2px;
+    height: 44px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 176px;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+/* Footer */
+.footer {
+    background-color: #000;
+    padding: 128px 112px 60px; 
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footer-logo-name {
+    color: #fff;
+    font-size: 24px;
+    font-family: "RobotoB";
+    text-align: center;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.footer-logo-field {
+    margin: 0;
+}
+
+.footer-info__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: "RalewayR";
+}
+
+.footer-info-list__item a:hover {
+    color: #fff;
+}
+
+.footer-info__list a, .copyright {
+    color: #9D9595;
+}
+
+.header__item {
+    font-size: 20px;
+    font-family: "RalewayB";
+    color: #fff;
+}
+
+.social-links {
+    padding-top: 40px;
+    display: flex;
+    gap: 24px;
+}
+
+.payment-systems {
+    display: flex;
+    gap: 38px;
+    justify-content: center;
+    padding-bottom: 32px;
+}
+
+.copyright {
+    font-family: "Inter";
+    font-size: 12px;
+    text-align: center;
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1380px) {
+    .hero-search-input::placeholder {
+        font-size: 14px;
+    }
+    .hero-search-category {
+        padding-right: 20px;
+    }
+    .hero-search-field {
+        width: 1080px;
+    }
+}
+
+@media screen and (max-width: 1215px) {
+    .search__input {
+        max-width: 250px;
+    }
+    .hero-header, .section-header {
+        font-size: 50px;
+    }
+    .hero-large-button {
+        width: 340px;
+        border-radius: 40px;
+        font-size: 20px;
+        height: 50px;
+    }
+    .hero-medium-button {
+        width: 150px;
+    }
+    .hero-search-category {
+        padding-right: 0;
+    }
+    .hero-search-field {
+        width: 1000px;
+    }
+    .recently-trips__list {
+        gap: 15px;
+    }
+    .subscription-header {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .logo-field {
+        margin-right: 20px;
+    }
+    .nav__list {
+        margin-right: 20px;
+        gap: 16px;
+    }
+    .nav-list__item a {
+        font-size: 14px;
+    }
+    .hero-search-category {
+        padding-left: 5px;
+    }
+    .hero-search-field {
+        padding: 0 16px;
+    }
+    .hero-search-field {
+        width: 900px;
+        height: 60px;
+    }
+    .hero-medium-button {
+        width: 120px;
+        height: 46px;
+    }
+    .hero-search-category {
+        height: 60px;
+    }
+    .subscription-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .logo-name {
+        font-size: 10px;
+    }
+    .hero-header, .section-header {
+        font-size: 44px;
+    }
+    .hero-large-button {
+        width: 280px;
+        border-radius: 40px;
+        font-size: 18px;
+        height: 44px;
+    }
+    .hero-medium-button {
+        width: 130px;
+        height: 44px;
+        font-size: 14px;
+    }
+    .subscription-header {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .nav-mobile {
+        display: flex;
+    }
+    .nav__list, .fast-info {
+        display: none;
+    }
+    .logo-name {
+        font-size: 12px;
+    }
+    .logo-field, .search-field {
+        margin: 0;
+    }
+    .hero-search-field {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        border-radius: 10px;
+        padding: 8px 8px;
+        bottom: 10%;
+    }
+    .hero-search-categories {
+        flex-direction: column;
+    }
+    .partition-section {
+        border: none;
+    }
+    .hero-search-category {
+        padding: 0;
+        height: 40px;
+    }
+    .hero-search-input {
+        width: 180px;
+    }
+    .hero-medium-button {
+        height: 36px;
+    }
+    .footer {
+        padding: 128px 80px 80px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .hero-header, .section-header {
+        font-size: 36px;
+    }
+    .hero-search-input::placeholder {
+        font-size: 12px;
+    }
+    .hero-search-category {
+        height: 35px;
+    }
+    .footer-info {
+        gap: 22px;
+        justify-content: space-around;
+    }
+    .footer-info__list {
+        text-align: center;
+    }
+    .social-links {
+        justify-content: space-around;
+    }
+    .travel-application-description {
+        font-weight: bold;
+    }
+    .subscription-header {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width:820px) {
+    .recently-trips-link {
+        display: none;
+    }
+    .recently-trips-control {
+        display: flex;
+    }
+    .carousel-list__item {
+        width: 49.5%;
+    }
+    .black-insert {
+        width: 680px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .black-insert {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .hero-header, .section-header {
+        font-size: 28px;
+    }
+    .hero-search-field {
+        display: none;
+    }
+    .popular-searches {
+        padding: 64px 0;
+    }
+    .popular-searches-list__item {
+        font-size: 14px;
+        width: 170px;
+    }
+    .footer-logo-field img {
+        height: 40;
+        width: 59;
+    }
+    .footer-logo-name {
+        font-size: 16px;
+    }
+    .subscription-header {
+        font-size: 36px;
+    }
+    .subscription__input {
+        width: 300px;
+    }
+    .subscription__input::placeholder {
+        font-size: 12px;
+    }
+    .subscription__button {
+        font-size: 12px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .desktop-navigation {
+        padding: 10px;
+    }
+    .application-image {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .black-insert {
+        width: 450px;
+    }
+    .popular-trips-list__item {
+        width: 100%;
+    }
+    .popular-trips-control {
+        position: static;
+        top: auto;
+        right: auto;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        padding: 40px 0;
+        gap: 40px;
+    }
+    .popular-trips__list {
+        padding: 0 0 70px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .hero-large-button {
+        width: 200px;
+    }
+    .popular-searches {
+        padding: 32px 0;
+    }
+    .section-header {
+        padding-bottom: 32px;
+    }
+    .recently-trips-header-field {
+        margin-bottom: 0;
+    }
+    .places-name {
+        font-size: 36px;
+    }
+    .footer {
+        padding-top: 80px;
+        padding-bottom: 16px;
+    }
+    .travel-application-header {
+        text-align: center;
+    }
+
+    .travel-application-description {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .travel-application-content {
+        padding: 24;
+    }
+    .application-image {
+        opacity: 0.7;
+    }
+    .carousel-list__item {
+        width: 100%;
+    }
+    .black-insert {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .search__input {
+        font-size: 12px;
+        height: 30px;
+        width: 200px;
+    }
+    .search-ico-field {
+        width: 24px;
+        height: 24px;
+        right: 3px;
+        top: 3px;
+    }
+    .hero-header, .popular-searches-header {
+        font-size: 22px;
+    }
+    .hero-large-button {
+        font-size: 14px;
+        width: 160px;
+        height: 34px;
+    }
+    .places-name {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .search__input {
+        width: 180px;
+    }
+    .recently-trips-preview-price {
+        border-bottom-right-radius: 40px;
+    }
+    .recently-trips-description-content{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .recently-trips-preview-price {
+        border-bottom-right-radius: 38px;
+    }
+}
+
+/*# sourceMappingURL=styles.9fe86ac4.css.map */

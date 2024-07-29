@@ -1,0 +1,467 @@
+.search-result {
+    padding-bottom: 50px;
+}
+
+.search-header-field {
+    position: relative;
+    margin-bottom: 32px;
+    display: flex;
+    padding-top: 40px;
+}
+
+.search-header {
+    font-size: 40px;
+    padding: 0;
+    margin: 0;;
+}
+
+.reset-button {
+    color: #7483BD;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.search-result-field {
+    border-radius: 64px;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+}
+
+.search-result-inputs-field {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.search-category {
+    display: flex;
+    flex-direction: column;
+    gap: 24px ;
+}
+
+.search-category-header {
+    color: #fff;
+    font-size: 24px;
+}
+
+.search-category-input {
+    background: #000;
+    border: 1px solid #fff;
+    border-radius: 56px;
+    height: 56px;
+    width: 280px;
+    color: #fff;
+    padding: 14px 14px 14px 24px;
+}
+
+.search-category-input-field {
+    position: relative;
+}
+
+.search-category-input-svg {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.json-trips__list {
+    justify-content: center;
+    gap: 32px;
+}
+
+.trip-preview-field {
+    max-width: 384px;
+    height: 263px;
+}
+
+.trip-preview-image {
+    border-radius: 48px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.trips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error-image {
+    width: 100%;
+    max-width: 400px;
+    display: none;
+}
+
+.error-title {
+    padding: 0;
+}
+
+.recently-trips-small-button {
+    cursor: pointer;
+}
+
+
+
+/* Trip description */
+.popup-wrapper{
+    background-color: rgba(0, 0, 0, 0.75);
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.popup-field {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    max-height: 100vh;
+    overflow-y: scroll;
+    border-radius: 20px;
+    overflow-x: hidden;
+}
+
+.popup-field::-webkit-scrollbar {
+    width: 0;
+}
+
+.button {
+    width: 3vw;
+    height: 3vw;
+    background: #b9b9b9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.cross-rectangle {
+    width: 50%;
+    height: 10%;
+    background: #000;
+    position: absolute;
+}
+
+.rotate-plus {
+    transform: rotate(45deg);
+}
+
+.rotate-minus {
+    transform: rotate(-45deg);
+}
+
+
+
+.trip-description-header-field {
+    position: relative;
+}
+
+.trip-description-header-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-description-header-image {
+    width: 100%;
+    max-height: 527px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.trip-description-header {
+    font-family: "RobotoB";
+    font-size: 96px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    line-height: normal;
+}
+
+.trip-description-rating-number {
+    color: #fff;
+    font-size: 32px;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.trip-description-price {
+    font-family: "RobotoB";
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 2px 2px 2px #000;
+    padding-bottom: 10px;
+}
+
+.trip-description-price-old {
+    font-family: "RobotoR";
+    text-decoration: line-through;
+    text-decoration-thickness: 1px;
+}
+
+
+
+
+
+.trip-details-section {
+    padding-top: 70px;
+}
+
+.trip-details-wrapper {
+    display: flex;
+    padding: 0 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+
+.trip-details-content-title {
+    font-family: "RobotoB";
+    font-size: 40px;
+    line-height: 120%;
+    padding-bottom: 40px;
+    max-width: 520px;
+}
+
+.trip-details__list {
+    display: flex;
+    max-width: 480px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.trip-details-list-element {
+    width: 180px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-details-list-element-header {
+    display: flex;
+    height: 40px;
+    gap: 8px;
+    align-items: center;
+}
+
+.trip-details-list-element-title {
+    font-family: "RobotoBlack";
+}
+
+.trip-details-list-element-description {
+    font-family: "RobotoR";
+}
+
+.trip-details-image-field {
+    max-width: 690px;
+    max-height: 900px;
+}
+
+.trip-details-image-field img {
+    border-radius: 64px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.trip-details-main-description {
+    max-width: 520px;
+    font-family: "RalewayR";
+}
+
+
+
+.trip-schedule-section {
+    background: #F2F1F1;
+    width: 100%;
+    padding: 64px 0 20px;
+}
+
+.trip-schedule-wrapper {
+    max-width: 1236px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.trip-schedule__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+.trip-schedule-list-element {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.trip-schedule-header-wrapper {
+    box-shadow: 0px 2px 34px -12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    gap: 24px;
+    position: relative;
+    align-items: center;
+    border-radius: 80px;
+    background: #fff;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.day-order {
+    background: #BCFD49;
+    color: #000;
+    font-family: "RalewayBold";
+    padding: 30px 66px;
+    border-radius: 80px;
+}
+
+.trip-schedule-list-element-title {
+    font-family: "RalewayBold";
+    font-size: 24px;
+    line-height: 120%;
+}
+
+.arrow-field {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    display: flex;
+}
+
+.trip-schedule-list-element-description {
+    font-family: "RalewayR";
+    line-height: 160%;
+    border-radius: 0px 0px 64px 64px;
+    background: #fff;
+    padding: 60px 40px;
+    position: relative;
+    display: none;
+    top: -40px;
+}
+
+.active {
+    display: flex;
+}
+
+
+
+
+.button:hover {
+    background: #e0e0e0;
+}
+
+@media screen and (max-width: 1240px) {
+    .trip-details-image-field {
+        max-width: 490px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .search-result-field {
+        padding: 64px 20px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .trip-details-image-field {
+        display: none;
+    }
+    .trip-details__list {
+        justify-content: center;
+    }
+    .trip-details-content-title, .trip-details-main-description{
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 1010px) {
+    .fast-info-visible {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .search-category-input {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 755px) {
+    .search-category-input {
+        width: 250px;
+    }
+    .trip-description-header {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .search-result-inputs-field {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .day-order {
+        padding: 15px 30px;
+        font-size: 12px;
+    }
+    .trip-schedule-list-element-title {
+        font-size: 18px;
+    }
+    .arrow-field {
+        right: 10px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .trip-description-header {
+        font-size: 28px;
+    }
+    .trip-description-price {
+        font-size: 16px;
+        padding-bottom: 4px;
+    }
+    .trip-description-rating-number {
+        font-size: 24px;
+    }
+    .recently-trips-rating-field {
+        padding: 8px 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .trip-schedule-header-wrapper {
+        gap: 8px;
+    }
+}
+
+/*# sourceMappingURL=style.03591124.css.map */
